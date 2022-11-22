@@ -23,7 +23,7 @@ const Markets = () => {
   }
 
   return (
-    <section className="mt-8 mx-auto max-w-7xl">
+    <section className="mt-8 mx-auto max-w-7xl ">
       <h1 className="text-2xl mb-2 font-bold">
         Today <span className="bg-green-400 p-1">Crypto's</span> Prices{" "}
       </h1>

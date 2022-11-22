@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Markets from "./components/Markets";
-import Exchange from "./components/Exchange";
-import ApiComponent from "./components/ApiComponent";
+import Exch from "./components/Exch";
+import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 function App() {
   const [getPrice, setPrice] = useState({});
@@ -28,7 +28,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
       </Routes>
-      <ApiComponent />
+      <Exch />
+      <AboutUs />
       <Markets />
       <Footer />
     </BrowserRouter>

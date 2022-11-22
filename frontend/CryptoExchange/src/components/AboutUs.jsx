@@ -1,22 +1,23 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import about_us from "/src/assets/about_us.png";
 
-function Coins(props) {
-  const [getCoins, setGetCoins] = useState([]);
+function Coins() {
+  // const [getCoins, setGetCoins] = useState([]);
 
-  useEffect(() => {
-    async function fetchCoins() {
-      const URL = `http://localhost:5000/api/coins`;
-      try {
-        const res = await axios.get(URL);
-        console.log(res.data);
-        setGetCoins(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchCoins();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchCoins() {
+  //     const URL = `http://localhost:5000/api/coins`;
+  //     try {
+  //       const res = await axios.get(URL);
+  //       console.log(res.data);
+  //       setGetCoins(res.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   fetchCoins();
+  // }, []);
 
   return (
     <>
@@ -76,7 +77,7 @@ function Coins(props) {
             <img
               className="object-cover object-center rounded"
               alt="hero"
-              src="https://dummyimage.com/720x600"
+              src={about_us}
             />
           </div>
         </div>

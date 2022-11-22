@@ -7,6 +7,6 @@ from flask import jsonify
 
 class CoinsApiHandler(Resource):
   def get(self):
-    return JsonMe(FetchCoins())
+    return jsonify(FetchCoins())
 
  
