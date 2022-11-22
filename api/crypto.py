@@ -27,4 +27,6 @@ def FetchCoins():
                 }
             )
             #list_of_coins[each["id"]] = [each["name"], each["priceUsd"]]
-    return json.dumps(list_of_coins)
+    return list_of_coins#json.dumps(list_of_coins)
+
+

@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Markets from "./components/Markets";
 import Exchange from "./components/Exchange";
 import ApiComponent from "./components/ApiComponent";
+import Footer from "./components/Footer";
 function App() {
   const [getPrice, setPrice] = useState({});
 
@@ -29,6 +30,7 @@ function App() {
       </Routes>
       <ApiComponent />
       <Markets />
+      <Footer />
     </BrowserRouter>
   );
 }
