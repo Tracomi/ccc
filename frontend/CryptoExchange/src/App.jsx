@@ -7,6 +7,7 @@ import Markets from "./components/Markets";
 import Exch from "./components/Exch";
 import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 function App() {
   const [getPrice, setPrice] = useState({});
 
@@ -31,6 +32,7 @@ function App() {
       <Exch />
       <AboutUs />
       <Markets />
+      <Contact />
       <Footer />
     </BrowserRouter>
   );
