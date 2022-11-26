@@ -1,9 +1,12 @@
 import useAxiosCoins from "../hooks/useAxiosCoins";
 import Skeleton from "./Skeleton";
+import trade from "/src/assets/trade.webp";
 
 const Exch = () => {
   const { response, loading } = useAxiosCoins("/coins");
   console.log(response, "Success muie");
+  const { response2, loading2 } = useAxiosCoins("/rates");
+  console.log(response2, "Success mui2e");
 
   if (loading) {
     return (
@@ -15,13 +18,15 @@ const Exch = () => {
 
   return (
     <section className="mx-auto max-w-7xl ">
-      <form className="card mr-8">
+      <form className="card mr-8" action="/api/rates">
         <div className=" bg-white border-gray-800 shadow-2xl rounded-xl mt-4  card-body">
           <h2 className="font-bold text-2xl mb-4">Exchange Form</h2>
           <div className="flex items-center justify-between">
             <div className="relative">
               <input
                 type="number"
+                id="amount"
+                name="amount"
                 step="0.00000001"
                 placeholder="1.2"
                 className="border-gray-200 border font-semibold text-center text-md"
@@ -39,17 +44,13 @@ const Exch = () => {
                   ))}
               </select>
             </div>
-            <img
-              src="https://coinchange.to/images/arows.svg"
-              alt=""
-              srcset=""
-              className="w-1/8"
-            />
+            <img src={trade} alt="" srcset="" className="w-16 mb-3" />
             <div className="relative">
               <input
                 type="number"
                 step="0.00000001"
-                value=""
+                id="amount"
+                name="amount"
                 className="border-gray-200 border font-semibold text-center text-md"
                 placeholder="1.2"
               />

@@ -3,6 +3,8 @@ from flask_restful import Api, Resource, reqparse
 from flask_cors import CORS #comment this on deployment
 from api.HelloApiHandler import HelloApiHandler
 from api.CoinsApiHandler import CoinsApiHandler
+from api.RatesApiHandler import RatesApiHandler
+from api.test import test
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/CryptoExchange/build')
 CORS(app) #comment this on deployment
@@ -14,3 +16,5 @@ def serve(path):
 
 api.add_resource(HelloApiHandler, '/api/prices')
 api.add_resource(CoinsApiHandler, '/api/coins')
+api.add_resource(RatesApiHandler, '/api/rates')
+api.add_resource(test, '/api/test')
